@@ -35,8 +35,8 @@ def repeat(i,val):
 			while (val >= 2):
 				val = val -2
 				count = count + 1
-			total = total + ( count * 40 + 40 * val - 30 * count) 
-		total = total + 40 * val	
+			total = total + ( count * 80 + 40 * val - count * 30) 
+		# total = total + 40 * val	
 	return int(total) #returning the total of a specific product
 				
 def checkout(skus):
@@ -62,5 +62,3 @@ def checkout(skus):
 	return (needToPay)
 
 checkout("EEB")
-
-
