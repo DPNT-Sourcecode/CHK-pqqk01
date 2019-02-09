@@ -64,4 +64,7 @@ def checkout(skus):
 
 	for i in items.keys():
 		needToPay = needToPay + repeat(i,items[i])
+	print(needToPay)
 	return (needToPay)
+
+checkout("EE")
