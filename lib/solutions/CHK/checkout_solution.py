@@ -1,3 +1,4 @@
+items = {'A':0, 'B':0, 'C':0, 'D':0, 'E':0} # Intitialized the dictionary of the stocks
 #Calculates the total value from the basket taking into account the special offers
 def repeat(i,val):
 	total = 0
@@ -45,7 +46,7 @@ def repeat(i,val):
 				
 def checkout(skus):
 	needToPay =0 # Initializing the final amout needed to be paid
-	items = {'A':0, 'B':0, 'C':0, 'D':0, 'E':0} # Intitialized the dictionary of the stocks
+
 	#Count how many products are in the basket
 	for i in skus:
 		if(i not in "ABCDE"):
@@ -61,10 +62,11 @@ def checkout(skus):
 				items['D'] = items['D'] + 1
 			elif i == 'E':
 				items['E'] = items['E'] + 1
-
+	print(items)
 	for i in items.keys():
 		needToPay = needToPay + repeat(i,items[i])
 	print(needToPay)
 	return (needToPay)
 
-checkout("EE")
+checkout("ABCDEABCDE")
+
