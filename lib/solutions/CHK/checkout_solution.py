@@ -23,6 +23,8 @@ def repeat(i,val):
 		total = total + 20 * val
 	elif i == 'D':
 		total = total + 15 * val
+	elif i == 'E':
+		total = total + 40 * val	
 	return int(total) #returning the total of a specific product
 				
 def checkout(skus):
@@ -49,3 +51,4 @@ def checkout(skus):
 	print(needToPay)
 
 checkout("ABCDEEE")
+
