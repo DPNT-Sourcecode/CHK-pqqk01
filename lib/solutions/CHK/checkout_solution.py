@@ -1,5 +1,6 @@
 #Calculates the total value from the basket taking into account the special offers
 def repeat(i,val):
+	print(val)
 	total = 0
 	if i == 'A':
 		if(val>=5):
@@ -61,4 +62,4 @@ def checkout(skus):
 	print(needToPay)
 	return (needToPay)
 
-checkout("EEB")
+checkout("EEEBB")
