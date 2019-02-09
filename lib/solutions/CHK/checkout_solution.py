@@ -2,6 +2,12 @@
 def repeat(i,val):
 	total = 0
 	if i == 'A':
+		if(val>=5):
+			count = 0
+			while (val >= 5):
+				val = val -5
+				count = count + 1
+			total = total + ( count * 200)
 		if(val>=3):
 			count = 0	
 			while (val >= 3):
@@ -50,5 +56,6 @@ def checkout(skus):
 	# return (needToPay)
 	print(needToPay)
 
-checkout("ABCDEEE")
+checkout("AAAAAAAAAAAAA")
+
 
