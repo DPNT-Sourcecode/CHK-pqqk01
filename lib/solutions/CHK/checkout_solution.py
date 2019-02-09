@@ -20,12 +20,11 @@ def repeat(i,val):
 			total = total + 50 * val
 	elif i == 'B':
 		if(val>=2):
-			countB = 0	
+			count = 0	
 			while (val >= 2):
 				val = val - 2
-				countB = countB + 1
-			total = total + ( countB * 45 + 30 * val)
-			print(countB)
+				count = count + 1
+			total = total + ( count * 45 + 30 * val)
 		else:
 			total = total + 30 * val
 	elif i == 'C':
@@ -33,15 +32,24 @@ def repeat(i,val):
 	elif i == 'D':
 		total = total + 15 * val
 	elif i == 'E':
-		if(val>=2):
-			count = 0
-			while (val >= 2):
-				val = val -2
-				count = count + 1
-			if items['B'] >= 2:
-				aux = items['B']//2
-				print(aux, items['B'])
-				total = total + ( (count * 80) + (40 * val) - (aux * 45)) 
+		if(val>=4):
+			count45 = 0
+			while val >= 4:
+				val = val - 4
+				count45 = count45 + 1
+			total = total + (count45 * 160 - count45 * 45)
+		if val >= 2:
+			val = val - 2
+			total = total + 80 - 30
+		if val == 1:
+			total = total + 40
+		# 	count = 0
+		# 	while (val >= 2):
+		# 		val = val -2
+		# 		count = count + 1
+		# 	if items['B'] >= 2:
+		# 		aux = items['B']//2
+		# 		total = total + ( (count * 80) + (40 * val) - (aux * 45)) 
 				# if items['B']%2 == 1:
 				# 	total = total - 30
 		# total = total + 40 * val	
@@ -69,4 +77,4 @@ def checkout(skus):
 	print(needToPay)
 	return (needToPay)
 
-checkout("EEEBB")
+checkout("ABCDECBAABCABBAAAEEAA")
