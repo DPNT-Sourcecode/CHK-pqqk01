@@ -50,12 +50,8 @@ def checkout(skus):
 				items['D'] = items['D'] + 1
 			elif i == 'E':
 				items['E'] = items['E'] + 1
-	print(items)
 	for i in items.keys():
 		needToPay = needToPay + repeat(i,items[i])
-	# return (needToPay)
-	print(needToPay)
-
-checkout("AAAAAAAAAAAAA")
+	return (needToPay)
 
 
