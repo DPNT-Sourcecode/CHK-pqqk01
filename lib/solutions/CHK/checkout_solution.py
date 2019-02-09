@@ -40,7 +40,7 @@ def repeat(i,val):
 				count = count + 1
 			if items['B'] >= 2:
 				aux = items['B']//2
-				print(aux*45, items['B'])
+				print(aux, items['B'])
 				total = total + ( (count * 80) + (40 * val) - (aux * 45)) 
 				# if items['B']%2 == 1:
 				# 	total = total - 30
