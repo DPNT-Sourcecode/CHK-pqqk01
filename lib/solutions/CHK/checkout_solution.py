@@ -1,4 +1,6 @@
 #Calculates the total value from the basket taking into account the special offers
+countDic = {'A':0, 'B':0, 'C':0, 'D':0, 'E':0}
+
 def repeat(i,val):
 	total = 0
 	if i == 'A':
@@ -22,7 +24,7 @@ def repeat(i,val):
 			while (val >= 2):
 				val = val - 2
 				countB = countB + 1
-				print(countB)
+				countDic['B']=countDic['B']+1
 			total = total + ( countB * 45 + 30 * val)
 			print(countB)
 		else:
@@ -61,9 +63,10 @@ def checkout(skus):
 	for i in items.keys():
 		needToPay = needToPay + repeat(i,items[i])
 	print(needToPay)
+	print(countDic)
 	return (needToPay)
 
-checkout("EEEBB")
+checkout("EEEBBBB")
 
 
 
