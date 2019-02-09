@@ -1,7 +1,6 @@
 #Calculates the total value from the basket taking into account the special offers
 def repeat(i,val):
 	total = 0
-	countB = 0 
 	if i == 'A':
 		if(val>=5):
 			count = 0
@@ -19,7 +18,7 @@ def repeat(i,val):
 			total = total + 50 * val
 	elif i == 'B':
 		if(val>=2):
-			# countB = 0	
+			countB = 0	
 			while (val >= 2):
 				val = val - 2
 				countB = countB + 1
@@ -38,14 +37,13 @@ def repeat(i,val):
 			while (val >= 2):
 				val = val -2
 				count = count + 1
-			print(countB)
 			total = total + ( count * 80 + 40 * val - count * 30) 
 		# total = total + 40 * val	
 	return int(total) #returning the total of a specific product
 				
 def checkout(skus):
 	needToPay =0 # Initializing the final amout needed to be paid
-	items = {'A':0, 'C':0, 'D':0, 'E':0, 'B':0} # Intitialized the dictionary of the stocks
+	items = {'A':0, 'B':0, 'C':0, 'D':0, 'E':0} # Intitialized the dictionary of the stocks
 	for i in skus:
 		if(i not in "ABCDE"):
 			return -1
@@ -66,5 +64,6 @@ def checkout(skus):
 	return (needToPay)
 
 checkout("EEEBB")
+
 
 
