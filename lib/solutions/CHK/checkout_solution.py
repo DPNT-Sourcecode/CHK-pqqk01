@@ -39,7 +39,9 @@ def repeat(i,val):
 				val = val -2
 				count = count + 1
 			if items['B'] > 1:
-				total = total + ( count * 80 + 40 * val - items['B'] * 45) 
+				aux = items['B']//2
+				print(aux, items['B'])
+				total = total + ( count * 80 + 40 * val - aux * 45) 
 				if items['B']%2 == 1:
 					total = total - 30
 		# total = total + 40 * val	
@@ -67,4 +69,4 @@ def checkout(skus):
 	print(needToPay)
 	return (needToPay)
 
-checkout("EEEBB")
+checkout("EEEB")
