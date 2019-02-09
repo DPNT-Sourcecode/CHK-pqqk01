@@ -68,5 +68,6 @@ def checkout(skus):
 	print(needToPay)
 	return (needToPay)
 
-checkout("ABCDEABCDE")
+checkout("CCADDEEBBA")
+
 
