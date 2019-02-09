@@ -27,9 +27,9 @@ def repeat(i,val):
 				
 def checkout(skus):
 	needToPay =0 # Initializing the final amout needed to be paid
-	items = {'A':0, 'B':0, 'C':0, 'D':0} # Intitialized the dictionary of the stocks
+	items = {'A':0, 'B':0, 'C':0, 'D':0, 'E':0} # Intitialized the dictionary of the stocks
 	for i in skus:
-		if(i not in "ABCD"):
+		if(i not in "ABCDE"):
 			return -1
 		else:
 			if i == 'A':
@@ -40,7 +40,12 @@ def checkout(skus):
 				items['C'] = items['C'] + 1
 			elif i == 'D':
 				items['D'] = items['D'] + 1
-	
+			elif i == 'E':
+				items['E'] = items['E'] + 1
+	print(items)
 	for i in items.keys():
 		needToPay = needToPay + repeat(i,items[i])
-	return (needToPay)
+	# return (needToPay)
+	print(needToPay)
+
+checkout("ABCDEEE")
