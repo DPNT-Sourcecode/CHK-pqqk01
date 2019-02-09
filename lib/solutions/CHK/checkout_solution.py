@@ -1,6 +1,6 @@
 #Calculates the total value from the basket taking into account the special offers
 def repeat(i,val):
-	print(val)
+	print(type(val))
 	total = 0
 	if i == 'A':
 		if(val>=5):
