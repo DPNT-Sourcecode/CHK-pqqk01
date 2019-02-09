@@ -30,6 +30,12 @@ def repeat(i,val):
 	elif i == 'D':
 		total = total + 15 * val
 	elif i == 'E':
+		if(val>=2):
+			count = 0
+			while (val >= 2):
+				val = val -2
+				count = count + 1
+			total = total + ( count * 40 + 40 * val - 30 * count) 
 		total = total + 40 * val	
 	return int(total) #returning the total of a specific product
 				
@@ -52,6 +58,9 @@ def checkout(skus):
 				items['E'] = items['E'] + 1
 	for i in items.keys():
 		needToPay = needToPay + repeat(i,items[i])
+	print(needToPay)
 	return (needToPay)
+
+checkout("EEB")
 
 
