@@ -80,7 +80,7 @@ def checkout(skus):
 		# print("need3: ",i,items[i],needToPay)
 		needToPay = specialOffers(i,items[i],needToPay)
 		# print("need4: ",i,items[i],needToPay)
-	# print(needToPay)
+	print(needToPay)
 	return (needToPay)
 
 # checkout('')
@@ -88,4 +88,4 @@ def checkout(skus):
 # checkout('BB')
 # checkout('C')
 # checkout('D')
-# checkout('ABBE')
+checkout('AAAAA')
