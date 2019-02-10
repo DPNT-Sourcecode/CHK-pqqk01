@@ -63,4 +63,4 @@ def checkout(skus):
 		needToPay=specialOffers(i,items[i],needToPay)
 	print(needToPay)
 	return (needToPay)
-checkout("A")
+checkout("B")
