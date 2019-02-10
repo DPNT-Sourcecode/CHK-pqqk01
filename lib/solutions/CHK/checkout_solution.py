@@ -58,9 +58,9 @@ def checkout(skus):
 				items['E'] = items['E'] + 1
 	for i in items.keys():
 		needToPay = needToPay + add(i,items[i])
-
-	for i in items.keys():
-		needToPay=specialOffers(i,items[i],needToPay)
-	print(needToPay)
+		needToPay = specialOffers(i,items[i],needToPay)
+	# for i in items.keys():
+		
+	# print(needToPay)
 	return (needToPay)
-checkout("B")
+# checkout("EEEB")
