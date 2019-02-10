@@ -141,12 +141,8 @@ def checkout(skus):
 			return -1
 		else:
 			items[i]=items[i]+1
-	#print(items)
 	for i in items.keys():
 		needToPay = needToPay + add(i,items[i],price)
 		needToPay = specialOffers(i,items[i],needToPay,items)
 	needToPay = groupProducts(needToPay,items)
-	#print(needToPay)
 	return (needToPay)
-
-#checkout('AAAAAZZZZSSXTTTZ')
