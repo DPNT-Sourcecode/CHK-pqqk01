@@ -62,24 +62,26 @@ def add(i,val):
 
 def checkout(skus):
 	needToPay = 0 # Initializing the final amout needed to be paid
-	items = {'A':0, 'B':0, 'C':0, 'D':0, 'E':0, 'F':0}  # Intitialized the dictionary of the stocks
+	items = {'A':0, 'B':0, 'C':0, 'D':0, 'E':0, 'F':0, 'G':0, 'H':0, 'I':0, 'J':0, 'K':0, 'L':0, 'M':0, 'N':0, 'O':0, 'P':0, 'Q':0, 'R':0, 'S':0, 'T':0, 'U':0, 'V':0, 'W':0, 'X':0, 'Y':0, 'Z':0}  # Intitialized the dictionary of the stocks
 	for i in skus:
-		if(i not in "ABCDEF"):
+		if(i not in "ABCDEFGHIJKLMNOPQRSTUVWXYZ"):
 			print(-1)
 			return -1
 		else:
-			if i == 'A':
-				items['A'] = items['A'] + 1
-			elif i == 'B':
-				items['B'] = items['B'] + 1
-			elif i == 'C':
-				items['C'] = items['C'] + 1
-			elif i == 'D':
-				items['D'] = items['D'] + 1
-			elif i == 'E':
-				items['E'] = items['E'] + 1
-			elif i == 'F':
-				items['F'] = items['F'] + 1
+			items[i]=items[i]+1
+			# if i == 'A':
+			# 	items['A'] = items['A'] + 1
+			# elif i == 'B':
+			# 	items['B'] = items['B'] + 1
+			# elif i == 'C':
+			# 	items['C'] = items['C'] + 1
+			# elif i == 'D':
+			# 	items['D'] = items['D'] + 1
+			# elif i == 'E':
+			# 	items['E'] = items['E'] + 1
+			# elif i == 'F':
+			# 	items['F'] = items['F'] + 1
+	print(items)
 	for i in items.keys():
 		needToPay = needToPay + add(i,items[i])
 		needToPay = specialOffers(i,items[i],needToPay,items)
@@ -88,7 +90,7 @@ def checkout(skus):
 
 # checkout('ABCDECBAABCABBAAAEEAA')
 # checkout('')
-# checkout('AAAAAFFF')
+checkout('AAAAAFFF')
 # checkout('B')
 # checkout('C')
 # checkout('D')
@@ -127,4 +129,5 @@ def checkout(skus):
 # checkout("CCADDEEBBA")
 # checkout("AAAAAEEBAAABB")
 # checkout("ABCDECBAABCABBAAAEEAA")
+
 
