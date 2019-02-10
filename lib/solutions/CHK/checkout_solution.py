@@ -69,5 +69,3 @@ def checkout(skus):
 	return (needToPay)
 
 checkout("CCADDEEBBA")
-
-
