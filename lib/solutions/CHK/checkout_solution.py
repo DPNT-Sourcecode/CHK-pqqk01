@@ -3,28 +3,28 @@ items = {'A':0, 'B':0, 'C':0, 'D':0, 'E':0} # Intitialized the dictionary of the
 #Applying the discounts
 def specialOffers(i,val,discount):
 	if i == 'A':
-		if(val>=5):
+		if val >= 5:
 			count = 0
-			while (val >= 5):
-				val = val -5
+			while val >= 5:
+				val = val - 5
 				count = count + 1
-			discount = discount - ( count * 50)
-		if(val>=3):
+			discount = discount - (count * 50)
+		if val >= 3:
 			discount = discount - 20
 	elif i == 'B':
-		if items['E']>=2 and val!=0:
+		if items['E']>=2 and val != 0:
 			aux = items['E']
 			while aux >= 2:
-				aux = aux -2
-				val = val -1
-				discount = discount - 30 
-		if(val>=2):
-			while (val >= 2):
+				aux = aux - 2
+				val = val - 1
+				discount = discount - 30
+		if val >= 2:
+			while val >= 2:
 				val = val - 2
 				discount = discount - 15
 	return int(discount)
 
-#Computes the total without applying any discounts
+# Computes the total without applying the discount
 def add(i,val):
 	total = 0
 	if i == 'A':
@@ -38,10 +38,11 @@ def add(i,val):
 	elif i == 'E':
 		total = total + 40 * val
 	return int(total) #returning the total of a specific product
-
+	
 def checkout(skus):
 	needToPay =0 # Initializing the final amout needed to be paid
-	
+
+	#Count how many products are in the basket
 	for i in skus:
 		if(i not in "ABCDE"):
 			return -1
@@ -59,8 +60,8 @@ def checkout(skus):
 	for i in items.keys():
 		needToPay = needToPay + add(i,items[i])
 		needToPay = specialOffers(i,items[i],needToPay)
-	# for i in items.keys():
-		
-	# print(needToPay)
+
+	print(needToPay)
 	return (needToPay)
-# checkout("EEEB")
+
+checkout("BBEE")
