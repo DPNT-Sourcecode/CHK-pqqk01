@@ -120,12 +120,12 @@ def checkout(skus):
 	for i in items.keys():
 		needToPay = needToPay + add(i,items[i],price)
 		needToPay = specialOffers(i,items[i],needToPay,items)
-	print(needToPay)
+#	print(needToPay)
 	return (needToPay)
 
 # checkout('ABCDECBAABCABBAAAEEAA')
 # checkout('')
-checkout('RRRQQQQ')
+#checkout('RRRQQQQ')
 # checkout('B')
 # checkout('C')
 # checkout('D')
@@ -164,3 +164,4 @@ checkout('RRRQQQQ')
 # checkout("CCADDEEBBA")
 # checkout("AAAAAEEBAAABB")
 # checkout("ABCDECBAABCABBAAAEEAA")
+
