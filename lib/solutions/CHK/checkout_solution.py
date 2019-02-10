@@ -30,6 +30,11 @@ def specialOffers(i,val,discount,items):
 				val = val - 2
 				# items['B'] = items['B'] - 2
 				discount = discount - 15
+	elif i == 'F':
+		if val>=3:
+			while val >= 3:
+				val = val - 3
+				discount = discount - 10
 	# 	if(val==1):
 	# 		items['B'] = items['B'] - 1
 	# elif i == 'C':
@@ -53,13 +58,15 @@ def add(i,val):
 		total = total + 15 * val
 	elif i == 'E':
 		total = total + 40 * val
+	elif i == 'F':
+		total = total + 10 * val
 	return int(total) #returning the total of a specific product
 
 def checkout(skus):
 	needToPay = 0 # Initializing the final amout needed to be paid
-	items = {'A':0, 'B':0, 'C':0, 'D':0, 'E':0}
+	items = {'A':0, 'B':0, 'C':0, 'D':0, 'E':0, 'F':0}
 	for i in skus:
-		if(i not in "ABCDE"):
+		if(i not in "ABCDEF"):
 			print(-1)
 			return -1
 		else:
@@ -73,6 +80,8 @@ def checkout(skus):
 				items['D'] = items['D'] + 1
 			elif i == 'E':
 				items['E'] = items['E'] + 1
+			elif i == 'F':
+				items['F'] = items['F'] + 1
 	for i in items.keys():
 		# print("need1: ", i,items[i],needToPay)
 		needToPay = needToPay + add(i,items[i])
@@ -82,12 +91,12 @@ def checkout(skus):
 		# print("need3: ",i,items[i],needToPay)
 		needToPay = specialOffers(i,items[i],needToPay,items)
 		# print("need4: ",i,items[i],needToPay)
-	# print(needToPay)
+	print(needToPay)
 	return (needToPay)
 
 # checkout('ABCDECBAABCABBAAAEEAA')
 # checkout('')
-# checkout('A')
+checkout('FFFFFF')
 # checkout('B')
 # checkout('C')
 # checkout('D')
