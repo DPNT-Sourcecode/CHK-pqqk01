@@ -42,6 +42,12 @@ def specialOffers(i,val,discount,items):
 				val = val - 2
 				# items['B'] = items['B'] - 2
 				discount = discount - 10
+	elif i == 'N':
+		if(val>=3):
+			while (val >= 3):
+				val = val - 3
+				# items['B'] = items['B'] - 2
+				discount = discount - 15
 	elif i == 'P':
 		if(val>=5):
 			count = 0
@@ -145,6 +151,7 @@ checkout('UUUU')
 # checkout("CCADDEEBBA")
 # checkout("AAAAAEEBAAABB")
 # checkout("ABCDECBAABCABBAAAEEAA")
+
 
 
 
