@@ -56,12 +56,25 @@ def specialOffers(i,val,discount,items):
 				count = count + 1
 			discount = discount - ( count * 50)
 	elif i == 'Q':
+		if items['R']>=3 and val!=0:
+			aux = items['R']
+			while aux >= 3:
+				aux = aux - 3
+				val = val - 1
+				# items['B'] = items['B'] - 1
+				discount = discount - 30 
 		if(val>=3):
-			count = 0
 			while (val >= 3):
-				val = val -3
-				count = count + 1
-			discount = discount - ( count * 10)
+				val = val - 3
+				# items['B'] = items['B'] - 2
+				discount = discount - 10
+
+		# if(val>=3):
+		# 	count = 0
+		# 	while (val >= 3):
+		# 		val = val -3
+		# 		count = count + 1
+		# 	discount = discount - ( count * 10)
 	elif i == 'U':
 		if val>=4:
 			while val >= 4:
@@ -112,7 +125,7 @@ def checkout(skus):
 
 # checkout('ABCDECBAABCABBAAAEEAA')
 # checkout('')
-checkout('NNNNNNM')
+checkout('RRRQQQQ')
 # checkout('B')
 # checkout('C')
 # checkout('D')
