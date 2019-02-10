@@ -151,10 +151,3 @@ checkout('NNNNNNM')
 # checkout("CCADDEEBBA")
 # checkout("AAAAAEEBAAABB")
 # checkout("ABCDECBAABCABBAAAEEAA")
-
-
-
-
-
-
-
