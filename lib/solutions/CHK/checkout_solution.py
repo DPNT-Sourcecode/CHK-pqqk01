@@ -1,5 +1,3 @@
-# items = {'A':0, 'B':0, 'C':0, 'D':0, 'E':0} # Intitialized the dictionary of the stocks
-
 #Applying the discounts
 def specialOffers(i,val,discount,items):
 	if i == 'A':
@@ -64,7 +62,7 @@ def add(i,val):
 
 def checkout(skus):
 	needToPay = 0 # Initializing the final amout needed to be paid
-	items = {'A':0, 'B':0, 'C':0, 'D':0, 'E':0, 'F':0}
+	items = {'A':0, 'B':0, 'C':0, 'D':0, 'E':0, 'F':0}  # Intitialized the dictionary of the stocks
 	for i in skus:
 		if(i not in "ABCDEF"):
 			print(-1)
@@ -83,20 +81,14 @@ def checkout(skus):
 			elif i == 'F':
 				items['F'] = items['F'] + 1
 	for i in items.keys():
-		# print("need1: ", i,items[i],needToPay)
 		needToPay = needToPay + add(i,items[i])
-		# print("need2: ", i,items[i],needToPay)
-	# for i in items.keys():
-		# print(i,items[i],needToPay)
-		# print("need3: ",i,items[i],needToPay)
 		needToPay = specialOffers(i,items[i],needToPay,items)
-		# print("need4: ",i,items[i],needToPay)
-	print(needToPay)
+	# print(needToPay)
 	return (needToPay)
 
 # checkout('ABCDECBAABCABBAAAEEAA')
 # checkout('')
-checkout('FFFFFF')
+# checkout('AAAAAFFF')
 # checkout('B')
 # checkout('C')
 # checkout('D')
@@ -135,3 +127,4 @@ checkout('FFFFFF')
 # checkout("CCADDEEBBA")
 # checkout("AAAAAEEBAAABB")
 # checkout("ABCDECBAABCABBAAAEEAA")
+
