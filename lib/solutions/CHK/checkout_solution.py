@@ -1,7 +1,7 @@
-items = {'A':0, 'B':0, 'C':0, 'D':0, 'E':0} # Intitialized the dictionary of the stocks
+# items = {'A':0, 'B':0, 'C':0, 'D':0, 'E':0} # Intitialized the dictionary of the stocks
 
 #Applying the discounts
-def specialOffers(i,val,discount):
+def specialOffers(i,val,discount,items):
 	if i == 'A':
 		if(val>=5):
 			count = 0
@@ -23,21 +23,21 @@ def specialOffers(i,val,discount):
 			while aux >= 2:
 				aux = aux -2
 				val = val -1
-				items['B'] = items['B'] - 1
+				# items['B'] = items['B'] - 1
 				discount = discount - 30 
 		if(val>=2):
 			while (val >= 2):
 				val = val - 2
-				items['B'] = items['B'] - 2
+				# items['B'] = items['B'] - 2
 				discount = discount - 15
-		if(val==1):
-			items['B'] = items['B'] - 1
-	elif i == 'C':
-		items['C'] = 0 # OR items['C'] - val
-	elif i == 'D':
-		items['D'] = 0 # OR items['D'] - val
-	elif i == 'E':
-		items['E'] = 0 # OR items['E'] - val
+	# 	if(val==1):
+	# 		items['B'] = items['B'] - 1
+	# elif i == 'C':
+	# 	items['C'] = 0 # OR items['C'] - val
+	# elif i == 'D':
+	# 	items['D'] = 0 # OR items['D'] - val
+	# elif i == 'E':
+	# 	items['E'] = 0 # OR items['E'] - val
 	return int(discount)
 
 #Computes the total without applying any discounts
@@ -57,8 +57,10 @@ def add(i,val):
 
 def checkout(skus):
 	needToPay = 0 # Initializing the final amout needed to be paid
+	items = {'A':0, 'B':0, 'C':0, 'D':0, 'E':0}
 	for i in skus:
 		if(i not in "ABCDE"):
+			print(-1)
 			return -1
 		else:
 			if i == 'A':
@@ -78,14 +80,49 @@ def checkout(skus):
 	# for i in items.keys():
 		# print(i,items[i],needToPay)
 		# print("need3: ",i,items[i],needToPay)
-		needToPay = specialOffers(i,items[i],needToPay)
+		needToPay = specialOffers(i,items[i],needToPay,items)
 		# print("need4: ",i,items[i],needToPay)
-	print(needToPay)
+	# print(needToPay)
 	return (needToPay)
 
+# checkout('ABCDECBAABCABBAAAEEAA')
 # checkout('')
 # checkout('A')
-# checkout('BB')
+# checkout('B')
 # checkout('C')
 # checkout('D')
-checkout('AAAAA')
+# checkout('E')
+# checkout('a')
+# checkout('-')
+# checkout('ABCa')
+# checkout('AxA')
+# checkout('ABCDE')
+# checkout('A')
+# checkout('AA')
+# checkout('AAA')
+# checkout('AAAA')
+# checkout('AAAAA')
+# checkout('AAAAAA')
+# checkout('AAAAAAA')
+# checkout('AAAAAAAA')
+# checkout('AAAAAAAAA')
+# checkout('AAAAAAAAAA')
+# checkout("EE")
+# checkout("EEB")
+# checkout("EEEB")
+# checkout("EEEEBB")
+# checkout("BEBEEE")
+# checkout("A")
+# checkout("AA")
+# checkout("AAA")
+# checkout("AAAA")
+# checkout("AAAAA")
+# checkout("AAAAAA")
+# checkout("B")
+# checkout("BB")
+# checkout("BBB")
+# checkout("BBBB")
+# checkout("ABCDEABCDE")
+# checkout("CCADDEEBBA")
+# checkout("AAAAAEEBAAABB")
+# checkout("ABCDECBAABCABBAAAEEAA")
