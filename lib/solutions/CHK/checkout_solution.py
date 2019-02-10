@@ -72,7 +72,7 @@ def checkout(skus):
 
 # checkout('ABCDECBAABCABBAAAEEAA')
 # checkout('')
-checkout('HHHHHH')
+checkout('HHHHHHHHHHHHHHHHHHHHHHHHH')
 # checkout('B')
 # checkout('C')
 # checkout('D')
@@ -111,3 +111,4 @@ checkout('HHHHHH')
 # checkout("CCADDEEBBA")
 # checkout("AAAAAEEBAAABB")
 # checkout("ABCDECBAABCABBAAAEEAA")
+
