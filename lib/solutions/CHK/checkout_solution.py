@@ -10,11 +10,6 @@ def specialOffers(i,val,discount,items):
 			discount = discount - ( count * 50)
 		if(val>=3):
 			discount = discount - 20
-			items['A'] = items['A'] - 3
-		if(val==2):
-			items['A'] = items['A'] - 2
-		if(val==1):
-			items['A'] = items['A'] - 1
 	elif i == 'B':
 		if items['E']>=2 and val!=0:
 			aux = items['E']
@@ -33,6 +28,7 @@ def specialOffers(i,val,discount,items):
 			while val >= 3:
 				val = val - 3
 				discount = discount - 10
+
 	# 	if(val==1):
 	# 		items['B'] = items['B'] - 1
 	# elif i == 'C':
@@ -46,19 +42,7 @@ def specialOffers(i,val,discount,items):
 #Computes the total without applying any discounts
 def add(i,val,price):
 	total = 0
-	total = total + price['i'] * val
-	# if i == 'A':
-	# 	total = total + 50 * val
-	# elif i == 'B':
-	# 	total = total + 30 * val
-	# elif i == 'C':
-	# 	total = total + 20 * val
-	# elif i == 'D':
-	# 	total = total + 15 * val
-	# elif i == 'E':
-	# 	total = total + 40 * val
-	# elif i == 'F':
-	# 	total = total + 10 * val
+	total = total + price[i] * val
 	return int(total) #returning the total of a specific product
 
 def checkout(skus):
@@ -119,6 +103,3 @@ checkout('AAAAAFFF')
 # checkout("CCADDEEBBA")
 # checkout("AAAAAEEBAAABB")
 # checkout("ABCDECBAABCABBAAAEEAA")
-
-
-
